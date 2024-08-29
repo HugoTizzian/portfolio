@@ -13,16 +13,36 @@
 }
 @media only screen and (min-width : 767.1px) and (max-width : 1023.9px) and (orientation : portrait){
     .data{
-        width: 85%;
+        width: 75%;
+        flex-direction: row;
+    }
+    .header {
+        width: 60px; 
+        height: 100vh; 
+        text-align: center;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-90deg); 
+        transform-origin: left top; 
+        position: fixed; 
+        top: 0;
+        left: 0; 
+    }
+    body{
+        flex-direction: row;
     }
 }
 .title{
     font-size: x-large;
     align-self: center;
     color : rgb(229, 231, 235);
+    margin-bottom: 15;
 }
 
 body{
+    margin:0;
     background-color:  rgb(15, 23, 42);
     display: flex;
     flex-direction: column;
@@ -36,25 +56,35 @@ body{
     flex-direction: column;
 }
 
+
 .button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: rgb(30, 46, 84);
     padding-right: 10%;
     padding-left: 10%;
-    width:fit-content;
+    width:33%;
     height: fit-content;
     color: black;
     text-decoration-line: none;
     font-size: x-large;
     align-self: center;
+    border: 3px solid rgb(40, 56, 94);
 }
 
 .button:hover{
     background-color: rgb(40, 56, 94);
-    width: max-content;
-    height: 110%;
+    height: 150%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    border: 3px solid rgb(30, 46, 84);
 }
 
 .T1{
+    margin: 0 1% 0 1%;
     width: fit-content;
     display: flex;
     align-self: center;
@@ -65,9 +95,11 @@ body{
 }
 
 .T2{
+    margin: 24 3% 0 3%;
     display: flex;
     color : rgb(229, 231, 235);
     text-align: center;
+    text-align: justify;
 }
 
 .P1{
