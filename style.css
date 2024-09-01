@@ -3,37 +3,42 @@
     .data{
         width: 1024px;
     }
+    .divHeader{
+        width: 1024px;
+    }
 }
 
-@media only screen and (min-width : 320px) and (max-width : 767px) and (orientation : portrait){
+@media screen and (min-width : 320px) and (max-width : 1023px){
     /* Styles for portrait mode on mobile devices */
     .data{
-        width: 75%;
-    }
-}
-@media only screen and (min-width : 767.1px) and (max-width : 1023.9px) and (orientation : portrait){
-    .data{
-        width: 75%;
-        flex-direction: row;
-    }
-    .header {
-        width: 60px; 
-        height: 100vh; 
-        text-align: center;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: rotate(-90deg); 
-        transform-origin: left top; 
-        position: fixed; 
-        top: 0;
-        left: 0; 
+        width: 100%;
     }
     body{
-        flex-direction: row;
+        flex-direction: row !important;
+    }
+    .divHeader {
+            writing-mode:vertical-rl;
+            transform: rotate(180deg);
+            height:100vh;
+    }
+    nav{
+        height: 100%;
+    }
+    .button{
+        height: 33% !important;
+        width: auto !important;
+        align-self: auto !important;
+        padding: 0 !important;
+    }
+    .button:hover{
+        width: 100%;
+    }
+    ul{
+        height: 100vh;
+        margin:0;
     }
 }
+
 .title{
     font-size: x-large;
     align-self: center;
@@ -75,7 +80,6 @@ body{
 
 .button:hover{
     background-color: rgb(40, 56, 94);
-    height: 150%;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -108,7 +112,7 @@ body{
     gap: 1rem;
 }
 .halfS{
-    top: 65;
+    top: 70;
     position:sticky;
     display: flex;
     align-items: center;
@@ -120,14 +124,7 @@ body{
     display: flex;
     align-items: center;
     width: 50%;
-    height:3000px;
     flex-direction: column;
-}
-header{
-    display: flex;
-    justify-content: center;
-    position: sticky;
-    top:0;
 }
 ul{
     padding: 0;
@@ -139,4 +136,12 @@ nav{
     display: flex;
     justify-content: center;
     width:100%;
+}
+.divHeader{
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: sticky;
+    top:0;
 }
