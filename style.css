@@ -2,16 +2,26 @@
     /*Styles for classic screens (pc)*/
     .data{
         width: 1024px;
+        height: 100%;
     }
     .divHeader{
         width: 1024px;
     }
+    .P1{
+        flex-direction: row !important ;
+        align-items: unset !important;
+    }
 }
 
 @media screen and (min-width : 320px) and (max-width : 1023px){
-    /* Styles for portrait mode on mobile devices */
+    body{
+        height: 3000px;
+    }
     .data{
-        width: 100%;
+        flex-grow: 1;
+        height: 100%;
+        align-self: auto !important;
+        justify-content: unset !important;
     }
     body{
         flex-direction: row !important;
@@ -20,8 +30,9 @@
             writing-mode:vertical-rl;
             transform: rotate(180deg);
             height:100vh;
+            align-self: auto !important;
     }
-    nav{
+    nav.header{
         height: 100%;
     }
     .button{
@@ -33,13 +44,38 @@
     .button:hover{
         width: 100%;
     }
-    ul{
+    ul.header{
         height: 100vh;
         margin:0;
+        flex-direction: row-reverse;
+    }
+    .halfS{
+        width: 85% !important;
+        top:0 !important;
+    }
+    .half{
+        width: 85% !important;
+    }
+    .T2{
+        text-align: center !important;
+    }
+    .T1{
+        text-align: center !important;
     }
 }
-
+.button.active{
+    background-color: rgb(40, 56, 94);
+}
+html {
+    scroll-behavior: smooth;
+  }
+svg{
+    fill:white;
+    width:1.5rem;
+    height: 1.5rem;
+}
 .title{
+    font-weight: bold;
     font-size: x-large;
     align-self: center;
     color : rgb(229, 231, 235);
@@ -47,6 +83,8 @@
 }
 
 body{
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
     margin:0;
     background-color:  rgb(15, 23, 42);
     display: flex;
@@ -57,7 +95,6 @@ body{
 .data{
     align-self: center;
     display: flex;
-    justify-content: center;
     flex-direction: column;
 }
 
@@ -76,6 +113,8 @@ body{
     font-size: x-large;
     align-self: center;
     border: 3px solid rgb(40, 56, 94);
+    color:rgb(229, 231, 235);
+    transition: 0.5s ease;
 }
 
 .button:hover{
@@ -108,10 +147,13 @@ body{
 
 .P1{
     display: flex;
-    justify-content: space-between;
+    flex-direction:column;
+    align-items: center;
     gap: 1rem;
+    height: 3000px;
 }
 .halfS{
+    background-color:rgb(15, 23, 42); ;
     top: 70;
     position:sticky;
     display: flex;
@@ -125,23 +167,48 @@ body{
     align-items: center;
     width: 50%;
     flex-direction: column;
+    height: 1500px;
 }
-ul{
+ul.header{
     padding: 0;
     width: 100%;
     display: flex;
     justify-content: center;
 }
-nav{
+nav.header{
     display: flex;
     justify-content: center;
     width:100%;
 }
 .divHeader{
+    background-color: rgb(15, 23, 42);
     align-self: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
     position: sticky;
     top:0;
+}
+li.contact{
+    margin-right: 1.5rem;
+    display: inline-block;
+}
+ul.contact{
+    list-style: none;
+}
+section {
+    scroll-snap-align: start;
+    height: 100vh;
+    padding-top: 40%;  
+    margin-top: -40%;  
+    scroll-margin-top: 40%; 
+  }
+p.title{
+    display: flex;
+    justify-content: center;
+}
+a[href="#index"]:target~.button,
+a[href="#projets"]:target~.button,
+a[href="#contact"]:target~.button {
+  background-color: white;
 }
