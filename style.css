@@ -202,7 +202,8 @@ section {
     scroll-snap-align: start;
     height: 100vh;
     padding-top: 40%;  
-    margin-top: -40%;  
+    margin-top: -40%;
+    margin-bottom: 10%;  
   }
 p.title{
     display: flex;
