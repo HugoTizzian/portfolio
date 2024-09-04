@@ -203,16 +203,10 @@ section {
     height: 100vh;
     padding-top: 40%;  
     margin-top: -40%;  
-    scroll-margin-top: 40%; 
   }
 p.title{
     display: flex;
     justify-content: center;
-}
-a[href="#index"]:target~.button,
-a[href="#projets"]:target~.button,
-a[href="#contact"]:target~.button {
-  background-color: white;
 }
 li{
     display: inline-block;
@@ -253,7 +247,8 @@ a.Lexp{
     border-radius: 25px;
 }
 .T3:hover{
-background-color: rgb(30, 40, 80);
+background-color: rgba(30, 40, 80, 0.171);
+color:aquamarine;
 }
 
 #mouseCircle {
@@ -267,4 +262,19 @@ background-color: rgb(30, 40, 80);
 }
 .LT{
     margin-right: 3%;
+}
+.BR{
+    padding: 3 10 3 10;
+    width: fit-content;
+    border-radius:20px;
+    background-color: rgba(30, 40, 80, 0.685);
+    color:aquamarine;
+}
+ul{
+    padding: 0;;
+}
+img{
+    border-radius: 15%;
+    margin-left: 15%;
+    width: 100%;
 }
