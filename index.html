@@ -236,6 +236,7 @@
 
 
 <script>
+    if(/Windows|Macintosh|Linux/i.test(navigator.userAgent)){
     const circle = document.createElement('div');
     circle.id = 'mouseCircle';
     document.body.appendChild(circle);
@@ -243,7 +244,7 @@
     document.addEventListener('mousemove', (e) => {
       circle.style.left = `${e.pageX - 25}px`;
       circle.style.top = `${e.pageY - 25}px`;
-    });
+    });}
   </script>
 </body>
 
