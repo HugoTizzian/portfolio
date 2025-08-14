@@ -67,7 +67,12 @@ ul.header{ display:flex; flex-direction:column; gap:0.5rem; width:100%; }
     transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
     cursor:pointer;
 }
-.button svg{ width:1.25rem;height:1.25rem; fill:var(--muted); opacity:0.95 }
+.button svg{
+    width:16px;
+    height:16px;
+    fill:var(--muted);
+    opacity:0.95;
+}
 .button:hover{
     transform: translateY(-4px);
     box-shadow: 0 10px 30px rgba(49,130,206,0.12);
@@ -118,7 +123,11 @@ ul.header{ display:flex; flex-direction:column; gap:0.5rem; width:100%; }
 .contact ul{ display:flex; gap:0.5rem; margin-top:0.5rem; }
 .contact a{ display:flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:10px; background:var(--card); border:1px solid var(--glass); transition: transform .12s ease, background .12s;}
 .contact a:hover{ transform: translateY(-3px); background: linear-gradient(90deg,var(--accent-b),var(--accent-a)); }
-.contact svg{ width:20px;height:20px; fill:white; }
+.contact svg{
+    width:16px;
+    height:16px;
+    fill:white;
+}
 
 /* Sections (right column / content) */
 .half{ display:flex; flex-direction:column; gap:1.25rem; }
@@ -150,6 +159,10 @@ section > .title{ font-size:1.25rem; margin-bottom:0.45rem; color:#f8fafc }
 }
 .headerS{ min-width:120px; display:flex; align-items:center; justify-content:center; font-weight:700; color:#e6eefc; text-align:center; }
 .headerS img{ max-width:120px; border-radius:8px; display:block }
+.headerS svg{
+    width:56px;
+    height:auto;
+}
 
 /* skill badges */
 .BR{ display:inline-block; padding:6px 10px; margin:6px 6px 0 0; background:rgba(255,255,255,0.03); color:var(--muted); border-radius:10px; font-weight:600; font-size:0.85rem; border:1px solid rgba(255,255,255,0.02) }
