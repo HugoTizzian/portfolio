@@ -28,13 +28,14 @@ ul{margin:0;padding:0;list-style:none}
 
 /* Layout container */
 .data{
+    /* Make the main wrapper stretch full page and stack content vertically */
     max-width: var(--max-width);
-    margin: 2.5rem auto;
-    display:grid;
-    grid-template-columns: 300px 1fr;
-    gap: 2rem;
-    align-items:start;
-    padding: 1rem;
+    margin: 0 auto;
+    display: block;            /* no two-column grid anymore */
+    width: 100%;
+    padding: 0;                /* sections handle their own spacing */
+    min-height: 100vh;        /* ensures the container spans the full viewport */
+    background: transparent;   /* keep page background from root */
 }
 
 /* Sidebar / navigation */
@@ -80,7 +81,17 @@ ul.header{ display:flex; flex-direction:column; gap:0.5rem; width:100%; }
 }
 
 /* Main column */
-.P1{ display:flex; flex-direction:column; gap:1.5rem; }
+.P1{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    min-height: calc(100vh - 4rem); /* leave room for header/footer padding */
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    align-items: stretch;
+    justify-content: flex-start;
+}
 
 /* Hero card (left column content in original halfS) */
 .halfS{
