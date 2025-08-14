@@ -193,6 +193,43 @@ footer{
     margin-top:2rem;
 }
 
+/* ensure general SVGs stay responsive */
+svg{
+    display:inline-block;
+    vertical-align:middle;
+    max-width:100%;
+    height:auto;
+}
+
+/* UI icons (nav buttons, contact icons, inline icons) */
+.icon,
+.button svg,
+.contact svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px;
+    min-height: 18px;
+    max-width: none !important;
+}
+
+/* employer / logo SVGs used inside links — slightly larger but constrained */
+a.Lexp svg,
+.Lexp svg,
+.headerS svg {
+    width: 28px !important;
+    height: 28px !important;
+    max-width: none !important;
+    display:inline-block;
+}
+
+/* If some SVGs still come from third-party markup with inline width/height,
+   this will ensure CSS sizing wins */
+svg[width],
+svg[height]{
+    width: auto !important;
+    height: auto !important;
+}
+
 /* Responsiveness */
 @media (max-width: 1023px){
     .data{ grid-template-columns: 1fr; padding:1rem; margin:1rem; }
